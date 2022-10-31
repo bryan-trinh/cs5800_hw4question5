@@ -42,7 +42,8 @@ public class Account {
 
     // sample main function
     public static void main(String args[]){
-        IndividualHolder bryan = new IndividualHolder(AccountHolder.getNextID(), "123 Street St", "bryan", "123");
+        // can use AccountHolder.getNextID()
+        IndividualHolder bryan = new IndividualHolder(IndividualHolder.getNextID(), "123 Street St", "bryan", "123");
         // convert name
         System.out.println("current name: " + bryan.getName());
         bryan.setName(bryan.convertNameUpperCase(bryan.getName()));
@@ -61,7 +62,8 @@ public class Account {
         System.out.println("new balance: " + acc.getBalance());
         System.out.println();
 
-        CorporateHolder ericsson = new CorporateHolder(AccountHolder.getNextID(), "321 Road Rd", "123-345-6789");
+        // can also use AccountHolder.getNextID()
+        CorporateHolder ericsson = new CorporateHolder(CorporateHolder.getNextID(), "321 Road Rd", "123-345-6789");
         System.out.println("new holder ericsson's contact: " + ericsson.getContact());
         // update contact
         ericsson.setContact("321-543-0000");
