@@ -70,7 +70,7 @@ public class Account {
 
         System.out.println("curr account holder: " + acc.getHolder());
         acc.setHolder(ericsson);
-        System.out.println("new account holder: " + acc.getHolder());
+        System.out.println("somehow account got hacked, new account holder: " + acc.getHolder());
         // ericsson stole all of bryan's money
         acc.withdraw(1000000);
         System.out.println("ericsson stole all of bryan's money, account's balance: " + acc.getBalance());
