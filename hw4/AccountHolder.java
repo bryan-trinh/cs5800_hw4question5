@@ -2,32 +2,32 @@ package hw4;
 import java.lang.Math;
 
 public class AccountHolder{
-    int ID;
-    String address;
+    protected int ID;
+    protected String address;
 
     // constructor
-    AccountHolder(int ID, String address){
+    public AccountHolder(int ID, String address){
         this.ID = ID;
         this.address = address;
     }
 
     // returns a random number in the range of [1, 1000000]
-    static int getNextID(){
+    public static int getNextID(){
         return (int)(Math.random() * 1000000) + 1;
     }
 }
 
 interface Util{
     // converts name to upper case (interface method has no body)
-    String convertNameUpperCase(String name);
+    public String convertNameUpperCase(String name);
 }
 
 class IndividualHolder extends AccountHolder implements Util{
-    String name;
-    String SSN;
+    private String name;
+    private String SSN;
 
     // updated constructor
-    IndividualHolder(int ID, String address, String name, String SSN) {
+    public IndividualHolder(int ID, String address, String name, String SSN) {
         // super constructor from parent
         super(ID, address);
         this.name = name;
@@ -35,22 +35,22 @@ class IndividualHolder extends AccountHolder implements Util{
     }
 
     // returns the name of IndividualHolder
-    String getName(){
+    public String getName(){
         return this.name;
     }
 
     // returns the SSN;
-    String getSSN(){
+    public String getSSN(){
         return this.SSN;
     }
 
     // sets the name of the IndividualHolder
-    void setName(String name){
+    public void setName(String name){
         this.name = name;
     }
 
     // sets the SSN of the IndividualHolder
-    void setSSN(String SSN){
+    public void setSSN(String SSN){
         this.SSN = SSN;
     }
 
@@ -68,21 +68,21 @@ class IndividualHolder extends AccountHolder implements Util{
 }
 
 class CorporateHolder extends AccountHolder{
-    String contact;
+    private String contact;
 
     // updated constructor
-    CorporateHolder(int ID, String address, String contact) {
+    public CorporateHolder(int ID, String address, String contact) {
         super(ID, address);
         this.contact = contact;
     }
     
     // returns the contact
-    String getContact(){
+    public String getContact(){
         return this.contact;
     }
 
     // sets the contact of CorporateHolder
-    void setContact(String contact){
+    public void setContact(String contact){
         this.contact = contact;
     }
 }

@@ -1,8 +1,8 @@
 package hw4;
 
 public class Account {
-    AccountHolder holder;
-    double balance = 0.0;
+    private AccountHolder holder;
+    private double balance = 0.0;
 
     // constructor
     public Account(double amt, AccountHolder holder){
@@ -11,32 +11,32 @@ public class Account {
     }
 
     // adds onto balance by amt
-    void deposit(double amt){
+    public void deposit(double amt){
         this.balance += amt;
     }
 
     // subtracts from balance by amt
-    void withdraw(double amt){
+    public void withdraw(double amt){
         this.balance -= amt;
     }
 
     // returns the Account balance
-    double getBalance(){
+    public double getBalance(){
         return this.balance;
     }
 
     // returns the Account holder
-    AccountHolder getHolder(){
+    public AccountHolder getHolder(){
         return this.holder;
     }
 
     // sets the balance for the Account
-    void setBalance(double amt){
+    public void setBalance(double amt){
         this.balance = amt;
     }
 
     // sets the holder for the Account
-    void setHolder(AccountHolder holder){
+    public void setHolder(AccountHolder holder){
         this.holder = holder;
     }
 
