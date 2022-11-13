@@ -1,7 +1,7 @@
 package hw4;
 import java.lang.Math;
 
-public class AccountHolder{
+abstract class AccountHolder{
     protected int ID;
     protected String address;
 
